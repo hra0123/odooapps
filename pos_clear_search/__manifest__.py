@@ -22,6 +22,7 @@
 	point of sale clear search product 
 	""",
 	'author':"Muhammed Aslam",
+	'license':'OPL-1',
 	'website':'https://www.linkedin.com/in/muhammed-aslam-817327106/',
 	'depends':['point_of_sale'],
 	'data': [],
