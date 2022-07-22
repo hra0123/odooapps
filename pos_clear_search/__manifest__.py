@@ -2,22 +2,38 @@
 
 {
 	'name':"POS Clear Search",
-	'version':'14.1',
+	'version':'15.1',
 	'category':'Point of Sale',
 	'summary':'POS Clear Search- clear the search items',
 	'description':""" This module is used to clear items from search 
+	pos clear search
+	pos reset search
+	pos search
+	pos clear search product
+	pos advance search
+	pos advance search clear
+	pos exact search
+	point of sale search
+	point of sale clear search
+	point of sale reset search
+	point of sale advance search 
+	point of sale exact search
+	point of sale advance search clear
+	point of sale clear search product 
 	""",
 	'author':"Muhammed Aslam",
-	'license': 'OPL-1',
 	'website':'https://www.linkedin.com/in/muhammed-aslam-817327106/',
 	'depends':['point_of_sale'],
-	'data':[
-		'views/assets.xml',
-	],
-	'images': ['static/description/banner.png'],
-	'qweb': [
-		'static/src/xml/clear_input_search.xml'
-	],
+	'data': [],
+	'images': ['static/description/banner.jpg'],
 	"auto_install": False,
 	'installable': True,
+	'assets': {
+			'point_of_sale.assets': [
+				'pos_clear_search/static/src/js/**/*',
+			],
+			'web.assets_qweb': [
+				'pos_clear_search/static/src/xml/**/*',
+			],
+		},
 }
