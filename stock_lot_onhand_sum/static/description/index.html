@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Lot - Grouped SUM Documentation</title>
+    <style>
+        .screenshot-img {
+            max-width: 90%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Odoo Module: Stock Lot - Grouped SUM for Computed Fields</h1>
+    <p>This module provides a critical fix for inventory management in Odoo by enabling the correct summation of non-stored computed fields like **'On Hand Quantity'** (<code>product_qty</code>) when grouping Lot/Serial Numbers by Product.</p>
+
+    <h2>Key Functionality</h2>
+    <ul>
+        <li>**Field Targeted:** <code>product_qty</code> (On Hand Quantity).</li>
+        <li>**Method:** Overrides <code>stock.lot</code>'s <code>_read_group</code> and <code>read_group</code> methods.</li>
+        <li>**Mechanism:** Calculates the sum of quantities in Python for each group instead of relying on inefficient SQL aggregation for computed fields.</li>
+    </ul>
+
+    <h2>Installation and Usage</h2>
+    <p>For a full demonstration of the problem and the solution provided by this module, watch the video below:</p>
+
+    <p style="text-align: center; font-size: 1.2em; font-weight: bold;">
+        <a href="https://youtu.be/3zqb7OJAbSE" target="_blank">📺 Watch Demo Video on YouTube (Click Here)</a>
+    </p>
+
+    <p>After installing the module, navigate to Inventory > Lots/Serial Numbers and group the view by **Product** to see the accurate totals, as shown in this screenshot:</p>
+
+    <p style="text-align: center;">
+        <img src="/stock_lot_onhand_sum/static/description/screenshot.png"
+             alt="Screenshot showing correct summed On Hand Quantity when grouped by Product."
+             class="screenshot-img"/>
+    </p>
+
+    <p>Note how the totals (e.g., 99.00 and 99.00) are correctly calculated for the grouped products <code>pro2 (2)</code> and <code>pro3 (2)</code>.</p>
+
+    <footer>
+        <p>&copy; 2025 Your Name / Company</p>
+    </footer>
+</body>
+</html>
